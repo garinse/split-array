@@ -3,7 +3,7 @@ function calcMemory(obj) {
     let bytes = 0
 
     if (!obj && obj !== 0) {
-        return
+        return bytes
     }
 
     const objType = typeof obj
