@@ -1,0 +1,23 @@
+{
+  "name": "split-array",
+  "version": "1.0.0",
+  "description": "",
+  "main": "split-array.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garinse/split-array.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garinse/split-array/issues"
+  },
+  "homepage": "https://github.com/garinse/split-array#readme",
+  "dependencies": {
+    "jest": "^28.1.0"
+  }
+}
