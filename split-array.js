@@ -1,7 +1,8 @@
+
 function calcMemory(obj) {
     let bytes = 0
 
-    if (!obj) {
+    if (!obj && obj !== 0) {
         return
     }
 
@@ -25,6 +26,30 @@ function calcMemory(obj) {
     return bytes
 }
 
+function splitToChunks(arr, chunkBytes) {
+    const result = []
+    let chunk = []
+    let currentChunkBytes = 0
+
+    for (let i = 0; i <= arr.length; i++) {
+        const item = arr[i]
+
+        const itemSize = calcMemory(item)
+
+        if (currentChunkBytes + itemSize <= chunkBytes) {
+            chunk.push(item)
+            currentChunkBytes += itemSize
+        } else {
+            result.push(chunk)
+            chunk = [item]
+            currentChunkBytes = itemSize
+        }
+    }
+
+    return result
+}
+
 module.exports = {
-    calcMemory
+    calcMemory,
+    splitToChunks
 }
